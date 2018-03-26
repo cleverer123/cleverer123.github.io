@@ -1,0 +1,85 @@
+---
+layout:     post
+title:      "Hello 2018"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2018-03-26 12:00:00
+author:     "Leo"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - 生活
+---
+
+> “Yeah It's on. ”
+
+
+## 前言
+
+2018 年，终于开始写博客了，写给自己，记录生活，放下过去，着眼未来，恩恩。
+
+[跳过废话，直接看技术实现 ](#build) 
+
+博客Fork自[Hux](https://github.com/Huxpro/huxpro.github.io)，header-img沿用自原po（因为太好看了）。
+
+
+<p id = "build"></p>
+---
+
+## 正文
+
+这部分说说配置博客的过程。
+
+（原始搭建细节见[原po](http://huangxuan.me/2015/01/29/hello-2015/)吧。）
+
+### 创建项目
+Fork [Hux](https://github.com/Huxpro/huxpro.github.io)，Settings里将“Repository name”改为cleverer123.github.io
+
+### 搭建本地环境
+首先安装[Ruby](https://rubyinstaller.org/downloads/)
+安装完毕后可以输入:ruby -v
+
+安装Ruby DevKit, 双击安装会出现解压目录，我解压在D:/Devkit;
+然后在终端中CD到Devkit的解压目录,
+下列命令初始化，然后安装
+```
+ruby dk.rb init
+```
+
+```
+ruby dk.rb install # 失败
+```
+
+在D:\Devkit config.yml 最后添加Ruby目录“- D:\Ruby22-x64”
+
+```
+ruby dk.rb install
+```
+
+安装Jekyll
+```
+gem install jekyll
+```
+安装jekyll-paginate
+```
+gem install jekyll-paginate
+```
+开启本地预览
+cd {local repository}
+```
+jekyll serve --port 3000
+```
+### 博客
+写博客
+打开本地的 _posts 文件夹，新建文件。 文件命名严格遵循 年-月-日-文章标题.文档格式 这样的格式，注意月份和日期是两位数。
+
+修改和提交
+```
+$ git add .
+$ git commit -m "statement" 
+$ git push origin master
+```
+
+当然，目前博客还有很多原博的内容，我会尽快修改。
+
+# 参考
+[Github pages + jekyll 博客快速搭建](http://www.cnblogs.com/xulei1992/p/5650329.html?utm_source=tuicool)
