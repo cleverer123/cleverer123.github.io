@@ -192,21 +192,20 @@ B. 计数器计数形式修改
 
 C. 计数器速查表（部分）
  
-计数器名 | 用途
------------ | -------
-part  | 部序号
-chapter | 章序号
-section | 节
-subsection | 小节
-subsubsection | 小小节
-paragraph | 段
-subparagraph | 小段
-figure | 插图序号
-table | 表格序号
-equation | 公式序号
-page | 页码计数器
-footnote | 脚注序号
-mpfootnote | 小页环境中脚注计数器
+|   计数器名   |         用途         |
+|--------------|----------------------|
+| part         | 部序号               |
+| chapter      | 章序号               |
+| section      | 节                   |
+| subsection   | 小节                 |
+| subparagraph | 小段                 |
+| figure       | 插图序号             |
+| table        | 表格序号             |
+| equation     | 公式序号             |
+| page         | 页码计数器           |
+| footnote     | 脚注序号             |
+| mpfootnote   | 小页环境中脚注计数器 |
+
 
 ## CITATIONS
   To be continued...
