@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "如何使用IEEE Latex模板"
-subtitle:   "Diary 2018 03 27"
+subtitle:   "Get ready for papers"
 date:       2018-03-27
 author:     "Leo"
 header-img: "img/post-bg-2015.jpg"
@@ -125,7 +125,11 @@ Fax: (888) 555--1212}}
 关于会议模式及其他模式的更多信息此处不多涉及。
 
 C. Running Headings（页眉）
-
+```
+\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+```
+  
   在页眉显示期刊名称和文章名称，初稿一般用不到
 
 D. Publication ID Marks

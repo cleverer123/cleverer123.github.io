@@ -83,3 +83,4 @@ $ git push origin master
 
 # 参考
 [Github pages + jekyll 博客快速搭建](http://www.cnblogs.com/xulei1992/p/5650329.html?utm_source=tuicool)
+[Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
