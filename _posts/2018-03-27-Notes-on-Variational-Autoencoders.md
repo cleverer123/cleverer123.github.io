@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "笔记：变分自编码器"
+title:      "变分自编码器"
 subtitle:   ""
 date:       2018-03-27
 author:     "Leo"
@@ -64,7 +64,11 @@ E[\log p(x| z)] +E[\log p(z)] - E[\log q(z)] = - KL(q(z)||p(z)) + E_{q(z)}[\log 
 因此，我们优化的目标可以分解成等号右边的两项。
 
 
+## 参考文献
 
+- [变分贝叶斯推断(Variational Bayes Inference)简介](https://blog.csdn.net/aws3217150/article/details/57072827)
+- [变分自编码器（VAEs） - Gapeng的文章 - 知乎](http://zhuanlan.zhihu.com/p/25401928)
+- [自编码变分贝叶斯](https://blog.csdn.net/NeutronT/article/details/78086340)
 
 
 
