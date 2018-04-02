@@ -322,7 +322,7 @@ $$\widetilde{\mathcal{L}}^B(\theta,\phi;x^{(i)}) = \frac{1}{2} \sum_{j=1}^J(1 + 
 - [变分自编码器（VAEs） - Gapeng的文章 - 知乎](http://zhuanlan.zhihu.com/p/25401928)
 - [自编码变分贝叶斯](https://blog.csdn.net/NeutronT/article/details/78086340)
 
-
+- [VAE-TensorFlow](https://github.com/y0ast/VAE-TensorFlow/blob/master/main.py)
 
 
 
