@@ -18,3 +18,7 @@ tags:
 - [学术兴趣小组-gan](https://zhuanlan.zhihu.com/academic-interests)
 - [深度神经网络生成模型：从 GAN VAE 到 CVAE-GAN - PENG Bo的文章 - 知乎](http://zhuanlan.zhihu.com/p/27966420)
 - [GAN for NLP (论文笔记及解读) - 杨敏Min Yang的文章 - 知乎](http://zhuanlan.zhihu.com/p/25168509)
+- [令人拍案叫绝的Wasserstein GAN - 郑华滨的文章 - 知乎](http://zhuanlan.zhihu.com/p/25071913)
+- [LS-GAN（损失敏感GAN） - Gapeng的文章 - 知乎](http://zhuanlan.zhihu.com/p/26007545)
+- [条条大路通罗马LS-GAN：把GAN建立在Lipschitz密度上 - 齐国君的文章 - 知乎](http://zhuanlan.zhihu.com/p/25204020)
+- [广义LS-GAN（GLS-GAN) :现在 LS-GAN和WGAN都是这个超模型的特例了 - 齐国君的文章 - 知乎](http://zhuanlan.zhihu.com/p/25580027)

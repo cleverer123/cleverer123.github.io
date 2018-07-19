@@ -212,6 +212,8 @@ C. 计数器速查表（部分）
 
 
 ## CITATIONS
+
+  [用Sublime Text 3管理文献](http://blog.baoduge.com/Use_ST3_manage_reference/)
   To be continued...
 
 ## EQUATIONS
