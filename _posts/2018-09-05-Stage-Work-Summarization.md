@@ -24,7 +24,7 @@ tags:
 - 概率PCA, 概率矩阵分解
 - 马尔可夫链-蒙特卡罗（MCMC，Markov Chain Monte Carlo），吉布斯采样（GS，Gibbs Sampling）
 - 变分贝叶斯推断（VI, Variational Baysian Inference）
-- 用变分推断求解LDA ，用LaTex编写笔记。
+- 用变分推断求解LDA ，用LaTex编写笔记《Variational Inference for Latent Dirichlet Allocation》。
 
 ## 概率图模型编程框架Edward（Python，TnesorFlow）：
 - 贝叶斯线性回归
@@ -34,16 +34,21 @@ tags:
 
 ## 研究问题
 
-Knowledge Graph Completion / Link Prediction. 多元关系数据建模
+Knowledge Graph Completion / Link Prediction. 
+（head, relation, ?） (head, ?, tail)  (?, relation, tail)
+求解或预测？
 
 ## Stocastic Block Models 二元关系建模，关系为隐含量
+依据结构建模
 - Infinite Relational Model (Kemp2006)
 - Mixed Membership Stochastic Block Model (Airoldi2008)
 - Nonparametric Latent Feature Model (Miller2009)
 - ...
 - 扩展隐含关系以对三元组进行建模，利用变分贝叶斯求解。
+- 撰写《Mixed Membership Stocastic Blocks for Knowledge Completion》中。
 
 ## Factorization（Embedding）
+实体和关系用向量表示。
 - Tranlating (not full-expressive)
     + TransE（Bordes2013）, TransH（Wang2014）, TransR (Lin2015), TransD(Ji2015)
 - Neural Network (High complexity)
@@ -51,6 +56,7 @@ Knowledge Graph Completion / Link Prediction. 多元关系数据建模
 - Muticative 
     + RESCAL (Nickel2011, Nickel2016a), Distmult (Yang2014), HoloE (Nickel2016), ComplEx (Trouillon2017), SimplE (Kazemi2018)
 - 数据本身的稀疏性，对Muticative Factorization的评分函数产生影响， 结合 Muticative 和 概率模型进行概率张量分解，求解方法与概率矩阵分解类似。
+- 撰写《Knowledge Graph Completion via Probabilistic Tensor Factorization》中。
 
 
 
