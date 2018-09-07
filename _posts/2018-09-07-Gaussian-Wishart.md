@@ -51,22 +51,23 @@ $$
 \end{align}
 $$
 
-求解正态-威沙特后验 $\mathcal{NW} (\mathbf{\mu}, \boldsymbol{\Lambda} | \boldsymbol{\mu}', \kappa', \nu', \mathbf{W}')$ 也就是
+求解正态-威沙特后验 
+$$\mathcal{NW} (\mathbf{\mu}, \boldsymbol{\Lambda} | \boldsymbol{\mu}', \kappa', \nu', \mathbf{W}')$$
+也就是
 
-$$
-\begin{align}
+$$\begin{align}
 \mathcal{N}(\boldsymbol{\mu}' | \boldsymbol{\mu}, \kappa' \boldsymbol{\Lambda}) \mathcal{W}(\boldsymbol{\Lambda} | \nu', \mathbf{W}') 
 &= \left( \kappa_0^*\Lambda\right)^{1/2} \cdot \exp \left[- \frac{1}{2} \left( \mu-\mu_0^* \right)^T\kappa_0^*\Lambda \left( \mu -\mu_0^* \right) \right]
 \end{align} |\Lambda|^{(\nu_0^*-D-1)/2} \cdot \exp \left[ -  \frac{1}{2}Tr \left( (W_0^*)^{-1}\Lambda_U \right) \right]
-$$
+\end{align}$$
 
-考察$\Lambda$的指数：
+考察$$\Lambda$$的指数：
 $$N+1+\nu_0-D-1 = 1 + \nu_0^*- D-1 \Rightarrow \nu_0^* = \nu_0 + N$$
 
-考察exp指数中$\boldsymbol{\mu}^T\boldsymbol{\Lambda}\boldsymbol{\mu}$:
+考察exp指数中$$\boldsymbol{\mu}^T\boldsymbol{\Lambda}\boldsymbol{\mu}$$:
 $$\kappa_0^* = N + \kappa_0$$
 
-考察 $\boldsymbol{\mu}^T \boldsymbol{\Lambda}$项：
+考察$$\boldsymbol{\mu}^T \boldsymbol{\Lambda}$$项：
 $$\sum_{i=1}^Nx_i + \kappa_0\mu_0 = \kappa_0^* \mu_0^*\Rightarrow \mu_0^* = \frac{\sum_{i=1}^Nx_i + \kappa_0\mu_0}{\kappa_0+N}$$
 
 $$\begin{align}
