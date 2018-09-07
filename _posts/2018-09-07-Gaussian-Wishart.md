@@ -20,6 +20,7 @@ x_i &\sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Lambda})\\
 
 展开形式如下：
 似然：
+
 $$
 \begin{align}
 \mathcal{N}(\mathbf{x}_i &| \boldsymbol{\mu}, \boldsymbol{\Lambda}) 
@@ -57,8 +58,8 @@ $$\mathcal{NW} (\mathbf{\mu}, \boldsymbol{\Lambda} | \boldsymbol{\mu^*}, \kappa^
 
 $$\begin{align}
 & \mathcal{N}(\boldsymbol{\mu^*} | \boldsymbol{\mu}, \kappa^* \boldsymbol{\Lambda}) \mathcal{W}(\boldsymbol{\Lambda} | \nu^*, \mathbf{W}^*) \\
-& = \left( \kappa_0^*\Lambda\right)^{1/2} \cdot \exp \left[- \frac{1}{2} \left( \mu-\mu_0^* \right)^T\kappa_0^*\Lambda \left( \mu -\mu_0^* \right) \right]
-\end{align} |\Lambda|^{(\nu_0^*-D-1)/2} \cdot \exp \left[ -  \frac{1}{2}Tr \left( (W_0^*)^{-1}\Lambda_U \right) \right] \\
+& = (\kappa_0^*\Lambda )^{1/2} \cdot \exp{ \left[- \frac{1}{2} \left( \mu-\mu_0^* \right)^T\kappa_0^*\Lambda \left( \mu -\mu_0^* \right) \right]} 
+ |\Lambda|^{(\nu_0^*-D-1)/2} \cdot \exp{\left[ -  \frac{1}{2}Tr \left( (W_0^*)^{-1}\Lambda_U \right) \right]} 
 \end{align}$$
 
 考察$$\Lambda$$的指数：
@@ -72,9 +73,8 @@ $$\sum_{i=1}^Nx_i + \kappa_0\mu_0 = \kappa_0^* \mu_0^*\Rightarrow \mu_0^* = \fra
 
 考察剩余项：
 $$\begin{align}
-tr(\mathbf{W^*}^{-1} \boldsymbol{\Lambda}) 
-&= tr(\mathbf{W}_0^{-1} \boldsymbol{\Lambda}) + \sum_{i=1}^{N}\mathbf{x}_i^T\boldsymbol{\Lambda}\mathbf{x}_i +  
-\boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - \boldsymbol{\mu^*}^T \kappa^*\boldsymbol{\Lambda} \boldsymbol{\mu}^*\\
+& tr(\mathbf{W^*}^{-1} \boldsymbol{\Lambda}) \\
+& = tr(\mathbf{W}_0^{-1} \boldsymbol{\Lambda}) + \sum_{i=1}^{N}\mathbf{x}_i^T\boldsymbol{\Lambda}\mathbf{x}_i + \boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - \boldsymbol{\mu^*}^T \kappa^* \boldsymbol{\Lambda} \boldsymbol{\mu}^*  
 \end{align}$$
 
 其中：
@@ -82,7 +82,7 @@ tr(\mathbf{W^*}^{-1} \boldsymbol{\Lambda})
 $$\begin{align}
 & \boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - \boldsymbol{\mu^*}^T \kappa^*\boldsymbol{\Lambda} \boldsymbol{\mu}^* \\
 & = \kappa_0 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 - \frac{1}{\kappa_0 + N}(\kappa_0^2 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 + N \kappa_0 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}_0 + N \kappa_0 \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 + N^2 \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}) \\
-& = \frac{N\kappa_0}{\kappa_0 + N} \left( \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} - \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 - \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} + \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 \right) - N \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}\\
+& = \frac{N\kappa_0}{\kappa_0 + N} \left( \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} - \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 - \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} + \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 \right) - N \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}  
 \end{align}$$
 
 
