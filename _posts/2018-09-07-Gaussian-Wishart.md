@@ -63,7 +63,7 @@ $$\begin{align}
 \end{align}$$
 
 考察$$\Lambda$$的指数：
-$$N+1+\nu_0-D-1 = 1 + \nu_0^*- D-1 \Rightarrow \nu_0^* = \nu_0 + N$$
+$$N+1+\nu_0-D-1 = 1 + \nu^*- D-1 \Rightarrow \nu^* = \nu_0 + N$$
 
 考察exp指数中$$\boldsymbol{\mu}^T\boldsymbol{\Lambda}\boldsymbol{\mu}$$:
 $$\kappa_0^* = N + \kappa_0$$
@@ -74,14 +74,14 @@ $$\sum_{i=1}^Nx_i + \kappa_0\mu_0 = \kappa_0^* \mu_0^*\Rightarrow \mu_0^* = \fra
 考察剩余项：
 
 $$\begin{align}
-tr(\mathbf{W^*}^{-1} \boldsymbol{\Lambda}) \\
-& = tr(\mathbf{W}_0^{-1} \boldsymbol{\Lambda}) + \sum_{i=1}^{N}\mathbf{x}_i^T\boldsymbol{\Lambda}\mathbf{x}_i + \boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - \boldsymbol{\mu^*}^T \kappa^* \boldsymbol{\Lambda} \boldsymbol{\mu^*}  
+tr([\mathbf{W^*}]^{-1} \boldsymbol{\Lambda}) \\
+& = tr(\mathbf{W}_0^{-1} \boldsymbol{\Lambda}) + \sum_{i=1}^{N}\mathbf{x}_i^T\boldsymbol{\Lambda}\mathbf{x}_i + \boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - [\boldsymbol{\mu^*}]^T \kappa^* \boldsymbol{\Lambda} \boldsymbol{\mu^*}  
 \end{align}$$
 
 其中：
 
 $$\begin{align}
-\boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - \boldsymbol{\mu^*}^T \kappa^*\boldsymbol{\Lambda} \boldsymbol{\mu}^* \\
+\boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - [\boldsymbol{\mu^*}]^T \kappa^* \boldsymbol{\Lambda} \boldsymbol{\mu}^* \\
 & = \kappa_0 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 - \frac{1}{\kappa_0 + N}(\kappa_0^2 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 + N \kappa_0 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}_0 + N \kappa_0 \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 + N^2 \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}) \\
 & = \frac{N\kappa_0}{\kappa_0 + N} \left( \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} - \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 - \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} + \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 \right) - N \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}  
 \end{align}$$
