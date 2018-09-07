@@ -52,13 +52,13 @@ $$
 $$
 
 求解正态-威沙特后验 
-$$\mathcal{NW} (\mathbf{\mu}, \boldsymbol{\Lambda} | \boldsymbol{\mu}', \kappa', \nu', \mathbf{W}')$$
+$$\mathcal{NW} (\mathbf{\mu}, \boldsymbol{\Lambda} | \boldsymbol{\mu^*}, \kappa^*, \nu^*, \mathbf{W^*})$$
 也就是
 
 $$\begin{align}
-\mathcal{N}(\boldsymbol{\mu}' | \boldsymbol{\mu}, \kappa' \boldsymbol{\Lambda}) \mathcal{W}(\boldsymbol{\Lambda} | \nu', \mathbf{W}') 
+\mathcal{N}(\boldsymbol{\mu^*} | \boldsymbol{\mu}, \kappa^* \boldsymbol{\Lambda}) \mathcal{W}(\boldsymbol{\Lambda} | \nu^*, \mathbf{W}^*) 
 &= \left( \kappa_0^*\Lambda\right)^{1/2} \cdot \exp \left[- \frac{1}{2} \left( \mu-\mu_0^* \right)^T\kappa_0^*\Lambda \left( \mu -\mu_0^* \right) \right]
-\end{align} |\Lambda|^{(\nu_0^*-D-1)/2} \cdot \exp \left[ -  \frac{1}{2}Tr \left( (W_0^*)^{-1}\Lambda_U \right) \right]
+\end{align} |\Lambda|^{(\nu_0^*-D-1)/2} \cdot \exp \left[ -  \frac{1}{2}Tr \left( (W_0^*)^{-1}\Lambda_U \right) \right] \\
 \end{align}$$
 
 考察$$\Lambda$$的指数：
@@ -70,16 +70,17 @@ $$\kappa_0^* = N + \kappa_0$$
 考察$$\boldsymbol{\mu}^T \boldsymbol{\Lambda}$$项：
 $$\sum_{i=1}^Nx_i + \kappa_0\mu_0 = \kappa_0^* \mu_0^*\Rightarrow \mu_0^* = \frac{\sum_{i=1}^Nx_i + \kappa_0\mu_0}{\kappa_0+N}$$
 
+考察剩余想：
 $$\begin{align}
-    tr(\mathbf{W}'^{-1} \boldsymbol{\Lambda}) 
+    tr(\mathbf{W^*}^{-1} \boldsymbol{\Lambda}) 
         &= tr(\mathbf{W}_0^{-1} \boldsymbol{\Lambda}) + \sum_{i=1}^{N}\mathbf{x}_i^T\boldsymbol{\Lambda}\mathbf{x}_i +  
-        \boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - \boldsymbol{\mu'}^T \kappa'\boldsymbol{\Lambda} \boldsymbol{\mu}'\\               
+        \boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - \boldsymbol{\mu^*}^T \kappa^*\boldsymbol{\Lambda} \boldsymbol{\mu}^*\\               
 \end{align}$$
 
 其中：
 
 $$\begin{align}
-& \boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - \boldsymbol{\mu'}^T \kappa'\boldsymbol{\Lambda} \boldsymbol{\mu}' \\
+& \boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - \boldsymbol{\mu^*}^T \kappa^*\boldsymbol{\Lambda} \boldsymbol{\mu}^* \\
 & = \kappa_0 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 - \frac{1}{\kappa_0 + N}(\kappa_0^2 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 + N \kappa_0 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}_0 + N \kappa_0 \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 + N^2 \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}) \\
 & = \frac{N\kappa_0}{\kappa_0 + N} \left( \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} - \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 - \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} + \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 \right) - N \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}\\
 \end{align}$$
