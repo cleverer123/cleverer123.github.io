@@ -19,6 +19,7 @@ x_i &\sim \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\Lambda})\\
 \end{align}$$
 
 展开形式如下：
+
 似然：
 
 $$
@@ -57,7 +58,7 @@ $$\mathcal{NW} (\mathbf{\mu}, \boldsymbol{\Lambda} | \boldsymbol{\mu^*}, \kappa^
 也就是
 
 $$\begin{align}
-& \mathcal{N}(\boldsymbol{\mu^*} | \boldsymbol{\mu}, \kappa^* \boldsymbol{\Lambda}) \mathcal{W}(\boldsymbol{\Lambda} | \nu^*, \mathbf{W}^*) \\
+& \mathcal{N}(\boldsymbol{\mu} | \boldsymbol{\mu^*}, (\kappa^* \boldsymbol{\Lambda})^{-1}) \mathcal{W}(\boldsymbol{\Lambda} | \nu^*, \mathbf{W}^*) \\
 & = (\kappa^*\Lambda )^{1/2} \cdot \exp{ \left[- \frac{1}{2} \left( \mu-\mu^* \right)^T\kappa^*\Lambda \left( \mu -\mu^* \right) \right]} 
  |\Lambda|^{(\nu^*-D-1)/2} \cdot \exp{\left[ -  \frac{1}{2}Tr \left( (W^*)^{-1}\Lambda_U \right) \right]} 
 \end{align}$$
@@ -66,10 +67,10 @@ $$\begin{align}
 $$N+1+\nu_0-D-1 = 1 + \nu^*- D-1 \Rightarrow \nu^* = \nu_0 + N$$
 
 考察exp指数中$$\boldsymbol{\mu}^T\boldsymbol{\Lambda}\boldsymbol{\mu}$$:
-$$\kappa_0^* = N + \kappa_0$$
+$$\kappa^* = N + \kappa_0$$
 
 考察$$\boldsymbol{\mu}^T \boldsymbol{\Lambda}$$项：
-$$\sum_{i=1}^Nx_i + \kappa_0\mu_0 = \kappa_0^* \mu_0^*\Rightarrow \mu_0^* = \frac{\sum_{i=1}^Nx_i + \kappa_0\mu_0}{\kappa_0+N}$$
+$$\sum_{i=1}^Nx_i + \kappa_0\mu_0 = \kappa^* \boldsymbol{\mu}^*\Rightarrow \boldsymbol{\mu}^* = \frac{\sum_{i=1}^Nx_i + \kappa_0\boldsymbol{\mu_0}}{\kappa_0+N}$$
 
 考察剩余项：
 
@@ -83,9 +84,35 @@ tr([\mathbf{W^*}]^{-1} \boldsymbol{\Lambda}) \\
 $$\begin{align}
 \boldsymbol{\mu_0}^T \kappa_0 \boldsymbol{\Lambda}\boldsymbol{\mu_0} - [\boldsymbol{\mu^*}]^T \kappa^* \boldsymbol{\Lambda} \boldsymbol{\mu}^* \\
 & = \kappa_0 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 - \frac{1}{\kappa_0 + N}(\kappa_0^2 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 + N \kappa_0 \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}_0 + N \kappa_0 \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 + N^2 \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}) \\
-& = \frac{N\kappa_0}{\kappa_0 + N} \left( \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} - \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 - \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} + \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 \right) - N \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}}  
+& = \frac{N\kappa_0}{\kappa_0 + N} \left( \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} - \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 - \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} + \boldsymbol{\mu}_0^T \boldsymbol{\Lambda} \boldsymbol{\mu}_0 \right) - N \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} \\
+& = \frac{N\kappa_0}{\kappa_0 + N} (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0)^T \boldsymbol{\Lambda} (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0) - N \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} 
 \end{align}$$
 
+而：
 
+$$\begin{align}
+\sum_{i=1}^{N}\mathbf{x}_i^T\boldsymbol{\Lambda}\mathbf{x}_i - N \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} \\
+&= N \sum_{i=1}^N \left( \boldsymbol{x}_i^T \boldsymbol{\Lambda} \boldsymbol{x}_i - \boldsymbol{x}_i^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} - \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{x}_i + \boldsymbol{\bar{x}}^T \boldsymbol{\Lambda} \boldsymbol{\bar{x}} \right) \\
+& = N \sum_{i=1}^N \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right)^T \boldsymbol{\Lambda} \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right).
+\end{align}$$
 
+所以：
+
+$$\begin{align}
+tr([\mathbf{W^*}]^{-1} \boldsymbol{\Lambda}) \\
+& = tr(\mathbf{W}_0^{-1} \boldsymbol{\Lambda}) + \frac{N\kappa_0}{\kappa_0 + N} (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0)^T \boldsymbol{\Lambda} (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0) + N \sum_{i=1}^N \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right)^T \boldsymbol{\Lambda} \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right) \\
+& = tr(\mathbf{W}_0^{-1} \boldsymbol{\Lambda}) + tr( \frac{N\kappa_0}{\kappa_0 + N} (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0) (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0)^T \boldsymbol{\Lambda} ) + tr( N \sum_{i=1}^N \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right) \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right)^T \boldsymbol{\Lambda} ) \\
+& = tr\Big( \Big(\mathbf{W}_0^{-1} + \frac{N\kappa_0}{\kappa_0 + N} (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0) (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0)^T + N \sum_{i=1}^N \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right) \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right)^T \Big) \boldsymbol{\Lambda}  \Big)
+\end{align}$$
+
+所以：
+
+$$\begin{align}
+[\mathbf{W^*}]^{-1} 
+& = \mathbf{W}_0^{-1} + \frac{N\kappa_0}{\kappa_0 + N} (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0) (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0)^T + N \sum_{i=1}^N \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right) \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right)^T  
+\end{align}$$
+
+参考：
+- [Derivation of Normal-Wishart posterior](https://stats.stackexchange.com/questions/153241/derivation-of-normal-wishart-posterior)
+- [Conjugate Bayesian analysis of the Gaussian distribution](https://www.cs.ubc.ca/~murphyk/Papers/bayesGauss.pdf)
 
