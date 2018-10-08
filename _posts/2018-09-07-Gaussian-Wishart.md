@@ -10,6 +10,9 @@ tags:
     - Gaussian-Wishart
 ---
 
+>高斯威沙特分布是多元高斯分布（均值和精准矩阵）的共轭先验。
+
+
 模型表示如下：
 
 $$\begin{align}
@@ -59,7 +62,7 @@ $$\mathcal{NW} (\mathbf{\mu}, \boldsymbol{\Lambda} | \boldsymbol{\mu^*}, \kappa^
 
 $$\begin{align}
 & \mathcal{N}(\boldsymbol{\mu} | \boldsymbol{\mu^*}, (\kappa^* \boldsymbol{\Lambda})^{-1}) \mathcal{W}(\boldsymbol{\Lambda} | \nu^*, \mathbf{W}^*) \\
-& = (\kappa^*\Lambda )^{1/2} \cdot \exp{ \left[- \frac{1}{2} \left( \mu-\mu^* \right)^T\kappa^*\Lambda \left( \mu -\mu^* \right) \right]} 
+& \propto (\kappa^*\Lambda )^{1/2} \cdot \exp{ \left[- \frac{1}{2} \left( \mu-\mu^* \right)^T\kappa^*\Lambda \left( \mu -\mu^* \right) \right]} 
  |\Lambda|^{(\nu^*-D-1)/2} \cdot \exp{\left[ -  \frac{1}{2}Tr \left( (W^*)^{-1}\Lambda_U \right) \right]} 
 \end{align}$$
 
@@ -111,6 +114,9 @@ $$\begin{align}
 [\mathbf{W^*}]^{-1} 
 & = \mathbf{W}_0^{-1} + \frac{N\kappa_0}{\kappa_0 + N} (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0) (\boldsymbol{\bar{x}} - \boldsymbol{\mu}_0)^T + N \sum_{i=1}^N \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right) \left( \boldsymbol{x}_i - \boldsymbol{\bar{x}} \right)^T  
 \end{align}$$
+
+
+
 
 参考：
 - [Derivation of Normal-Wishart posterior](https://stats.stackexchange.com/questions/153241/derivation-of-normal-wishart-posterior)

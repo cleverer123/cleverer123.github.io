@@ -112,20 +112,38 @@ $$
 记$$Z={U,V,\mu,\Lambda}$$，
 利用$$Q(Z)$$近似后验$$P(Z|R)$$.
 
-$$Q(Z)=Q(U)Q(V)Q(\mu_U,\Lambda_U)Q(\mu_V,\Lambda_V)$$
+$$Q(Z)=Q(U)Q(V)Q(\mu_U)Q(\Lambda_U)Q(\mu_V)Q(\Lambda_V)$$
 
-$$Q(U)=\prod_{i} N(U_i|\mu^{*(U)}_{i},[\Lambda^{*(U)}_{i}]^{-1})$$
+$$Q(U)=\prod_{i} \prod_{d} N(U_{id}|\hat{m}^{(U)}_{id},\hat{s}^{U}_{id})$$
 
-$$Q(V)=$$
+$$Q(V)=\prod_{i} \prod_{d} N(V_{id}|\hat{m}^{(V)}_{id},\hat{s}^{V}_{id})$$
 
-$$Q(\mu_U,\Lambda_U)=\mathcal{NW} (\mathbf{\mu_U}, \boldsymbol{\Lambda_U} | \boldsymbol{\mu_U^*}, \kappa_U^*, \nu_U^*, \mathbf{W_U^*}) \\
-=\mathcal{N}(\boldsymbol{\mu} | \boldsymbol{\mu^*}, (\kappa^* \boldsymbol{\Lambda})^{-1}) \mathcal{W}(\boldsymbol{\Lambda} | \nu^*, \mathbf{W}^*)$$
+$$Q(\mu_U) = \mathcal{N}(\mu_U|\mu^*_{U}, H^*_{U})$$
 
+$$Q(\Lambda_U) = \mathcal{W}(\Lambda_U|W^*_U, \nu^*_{U})$$
 
+$$Q(\mu_V) = \mathcal{N}(\mu_V|\mu^*_{V}, H^*_{V})$$
+
+$$Q(\Lambda_V) = \mathcal{W}(\Lambda_V|W^*_V, \nu^*_{V})$$
+
+根据ELBO求解变分参数。
 
 $$\mathcal{L}(Q(Z)) = E_{Q(Z)}[\log P(R,Z)] - E_{Q(Z)}[\log Q(Z)] \\
-= E
+= E_{Q(Z)}[\log P(R|U,V)] \\
++ E_{Q(Z)}[\log P(U|\mu_U,\Lambda_U)] - E_{Q(Z)}[\log Q(U)] \\
++ E_{Q(Z)}[\log P(V|\mu_V,\Lambda_V)] - E_{Q(Z)}[\log Q(V)] \\ 
++ E_{Q(Z)}[\log P(\mu_U,\Lambda_U)] - E_{Q(Z)}[\log Q(\mu_U)] - E_{Q(Z)}[\log Q(\Lambda_U)] \\
++ E_{Q(Z)}[\log P(V|\mu_V,\Lambda_V)] - E_{Q(Z)}[\log Q(\mu_V)] - E_{Q(Z)}[\log Q(\Lambda_V)]
 $$
+
+
+
+<!-- 更新公式：
+
+$$\log Q^*(\mu_U) = E_{Q(Z-\mu_U)}[\log P(R,Z)] + const.$$
+
+$$\log Q^*(\Lambda_U) = E_{Q(Z-\Lambda_U)}[\log P(R,Z)] + const.$$ -->
+
 
 
 
