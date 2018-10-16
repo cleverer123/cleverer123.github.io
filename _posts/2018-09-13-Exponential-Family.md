@@ -56,7 +56,7 @@ $$
 &=  \frac{1}{(2\pi)^{D/2}}  \exp \left\{ {\underbrace{\left[ \begin{array}{c} \Sigma^{-1}\mu \\ -\frac{1}{2} \Sigma^{-1} \end{array} \right]}_{\eta(\theta) = [\eta_1;\eta_2]} }^T \underbrace{ \left[ \begin{array}{c} x \\ xx^T \end{array} \right] }_{T(x)}  - \underbrace{(\frac{1}{2} \log \left|\Sigma \right| + \frac{1}{2} \mu^T \Sigma^{-1} \mu )}_{A(\theta)} \right\} \end{align*}
 $$
 
-$$A(\theta) = - \frac{\eta_1^T \eta_2^{-1} \eta_1}{4} - \frac{\log |-2\eta_2|}{2} $$
+$$A(\eta) = - \frac{\eta_1^T \eta_2^{-1} \eta_1}{4} - \frac{\log |-2\eta_2|}{2} $$
 
 $$E_{p(x|\theta)}[x] = \frac{\partial A(\theta)}{\partial \eta_1} = - \frac{1}{4}(2\eta_2^{-1}\eta_1) = \mu $$
 

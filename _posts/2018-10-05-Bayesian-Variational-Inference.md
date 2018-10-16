@@ -24,7 +24,7 @@ $$KL(q||p) = \int q(t)\log \frac{q(t)}{p(t)}dt=E_q[\log q-\log p]=E_q[\log q]-E_
 
 因此，我们寻找 $$q(z)$$ 的问题，转化为一个优化问题:
 
-$$q^*(z) = argmax_{q(z) \in Q}KL(q(z)||p(z|x))$$
+$$q^*(z) = argmin_{q(z) \in Q}KL(q(z)||p(z|x))$$
 
 $$KL(q(z)||p(z|x))$$
 是关于 $$q(z)$$ 函数，而 $$q(z)\in Q$$ 是一个函数的函数，因此，这是一个泛函。正如微分是于函数求极值，而变分（variation）则是于泛函求极值。

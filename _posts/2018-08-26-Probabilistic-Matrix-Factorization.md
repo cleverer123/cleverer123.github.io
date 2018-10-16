@@ -136,6 +136,30 @@ $$\mathcal{L}(Q(Z)) = E_{Q(Z)}[\log P(R,Z)] - E_{Q(Z)}[\log Q(Z)] \\
 + E_{Q(Z)}[\log P(V|\mu_V,\Lambda_V)] - E_{Q(Z)}[\log Q(\mu_V)] - E_{Q(Z)}[\log Q(\Lambda_V)]
 $$
 
+1. 
+
+$$E_{Q(Z)}[\log P(R|U,V)]=\sum_{i=1}^{N} \sum_{j=1}^{M} E_{(Q)}[\log P(R_{ij}| U, V)] \\
+= \sum_{i=1}^{N} \sum_{j=1}^{M} E_{(Q)}[\log \left( (2\pi\sigma^2)^{-\frac{1}{2}} \exp{-\frac{1}{2\sigma^2}(R_{ij} - U_i^T V_j)^2 } \right) ] \\ 
+= \sum_{i=1}^{N} \sum_{j=1}^{M} \left\{ -\frac{1}{2}\log(2\pi\sigma^2) - -\frac{1}{2\sigma^2} E_{Q}[(R_{ij} - U_i^T V_j)^2] \right\}
+$$
+
+其中：
+
+$$E_{Q}[(R_{ij} - U_i^T V_j)^2] = R_{ij}^2 - 2R_{ij}E_{Q}[\sum_{i=1}^{D} U_{id}V_{id}] + E_{Q}[ (\sum_{i=1}^{D} U_{id}V_{id})^2 ] \\ 
+= R_{ij}^2 - 2 R_{ij} \sum_{i=1}^{D} \hat{m}^{(U)}_{id} \hat{m}^{(V)}_{id} + (\sum_{i=1}^{D} \hat{m}^{(U)}_{id} \hat{m}^{(V)}_{id})^2 + E_{Q}[ (\sum_{i=1}^{D} U_{id}V_{id})^2 ] - (\sum_{i=1}^{D} \hat{m}^{(U)}_{id} \hat{m}^{(V)}_{id})^2 \\= (R_{ij} - \sum_{i=1}^{D} \hat{m}^{(U)}_{id} \hat{m}^{(V)}_{id} )^2 + \sum_{i=1}^{D} (E_{Q}[ (U_{id}V_{id})^2 ] - [\hat{m}^{(U)}_{id}]^2 [\hat{m}^{(V)}_{id}]^2 ) \\
+= (R_{ij} - \sum_{i=1}^{D} \hat{m}^{(U)}_{id} \hat{m}^{(V)}_{id} )^2 +  \sum_{d=1}^{D} ([\hat{m}^{(U)}_{id}]^2 \hat{s}^{V}_{id} + [\hat{m}^{(V)}_{id}]^2 \hat{s}^{U}_{id} + \hat{s}^{U}_{id} \hat{s}^{V}_{id} ) $$
+
+2.
+
+$$ E_{Q(Z)}[\log P(U|\mu_U,\Lambda_U)] $$
+
+
+
+## Matrix Factorization with a hierarchical prior 
+
+
+
+
 
 
 <!-- 更新公式：
